@@ -1,0 +1,72 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}!
+{% load custom_tags %}
+
+{% block title %}
+News
+{% endblock title %}
+
+
+{% block content %}
+   <h1>Новостной портал</h1>
+   <hr>
+
+   <form action="" method="get">
+       {{ filterset.form.as_p }}
+       <input type="submit" value="Найти" />
+   </form>
+
+   {% if posts %}
+<h3> Количество статей/новостей на странице: {{ posts|length }} </h3>
+       <table>
+           <tr>
+               <td> <h5> Заголовок </h5> </td>
+               <td> <h5> Дата публикации </h5> </td>
+               <td> <h5> Краткое описание </h5> </td>
+           </tr>
+            {% for post in posts %}
+           <tr>
+               <td>{{ post.title }}</td>
+               <td>{{ post.create_time|date:"d.m.Y" }}</td>
+               <td>{{ post.text|truncatechars:21 }}</td>
+           </tr>
+           {% endfor %}
+       </table>
+
+   {% else %}
+       <h2>Новостей нет!</h2>
+   {% endif %}
+
+   {# Информация о предыдущих страницах #}
+   {% if page_obj.has_previous %}
+       <a href="?{% url_replace page=1 %}">1</a>
+       {% if page_obj.previous_page_number != 1 %}
+           ...
+           <a href="?{% url_replace page=page_obj.previous_page_number %}">{{ page_obj.previous_page_number }}</a>
+       {% endif %}
+   {% endif %}
+
+   {# Информация о текущей странице #}
+   {{ page_obj.number }}
+
+   {# Информация о следующих страницах #}
+   {% if page_obj.has_next %}
+       <a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>
+       {% if paginator.num_pages != page_obj.next_page_number %}
+           ...
+           <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>
+       {% endif %}
+   {% endif %}
+
+    <p>
+        {% if category and subscribed %}
+    <button> <a href="subscribe/{{category}}"> Подписаться на обновления в категории </a> </button>
+     </p>
+       {% else %}
+       <h5>Если хотите подписаться на рассылку постов в категории - установите фильтр </h5>
+        {% endif %}
+
+
+{% endblock content %}
+

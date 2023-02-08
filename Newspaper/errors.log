@@ -1,0 +1,253 @@
+06/Feb/2023 20:20:44   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\utils\log.py    Internal Server Error: /news/  (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError('Unknown argument for \'trans\' tag: \'{{\'. The only options available are \'noop\', \'context\' "xxx", and \'as VAR\'.'), <traceback object at 0x000001B16134B180>)
+Traceback (most recent call last):
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\defaulttags.py", line 954, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\templatetags\i18n.py", line 443, in do_translate
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Unknown argument for 'trans' tag: '{{'. The only options available are 'noop', 'context' "xxx", and 'as VAR'.
+06/Feb/2023 20:20:44   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\core\servers\basehttp.py    "GET /news/ HTTP/1.1" 500 246927  None
+06/Feb/2023 20:21:43   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\utils\log.py    Internal Server Error: /news/  (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError('Invalid block tag on line 78: \'"Wanna\', expected \'elif\', \'else\' or \'endif\'. Did you forget to register or load this tag?'), <traceback object at 0x000001F9A8E5EF00>)
+Traceback (most recent call last):
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: '"Wanna'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\defaulttags.py", line 954, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 78: '"Wanna', expected 'elif', 'else' or 'endif'. Did you forget to register or load this tag?
+06/Feb/2023 20:21:43   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\core\servers\basehttp.py    "GET /news/ HTTP/1.1" 500 200816  None
+06/Feb/2023 20:31:46   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\utils\log.py    Internal Server Error: /news/  (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 13: 'get_available_languages'. Did you forget to register or load this tag?"), <traceback object at 0x0000016E18DC8FC0>)
+Traceback (most recent call last):
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_available_languages'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 13: 'get_available_languages'. Did you forget to register or load this tag?
+06/Feb/2023 20:31:46   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\core\servers\basehttp.py    "GET /news/ HTTP/1.1" 500 181651  None
+06/Feb/2023 21:41:35   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\utils\log.py    Internal Server Error: /news/10  (<class 'TypeError'>, TypeError("OnePost.get() got an unexpected keyword argument 'pk'"), <traceback object at 0x0000018106855D80>)
+Traceback (most recent call last):
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: OnePost.get() got an unexpected keyword argument 'pk'
+06/Feb/2023 21:41:35   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\core\servers\basehttp.py    "GET /news/10 HTTP/1.1" 500 78746  None
+06/Feb/2023 21:41:40   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\utils\log.py    Internal Server Error: /news/1  (<class 'TypeError'>, TypeError("OnePost.get() got an unexpected keyword argument 'pk'"), <traceback object at 0x000001810664D100>)
+Traceback (most recent call last):
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: OnePost.get() got an unexpected keyword argument 'pk'
+06/Feb/2023 21:41:40   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\core\servers\basehttp.py    "GET /news/1 HTTP/1.1" 500 78730  None
+07/Feb/2023 20:51:43   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\utils\log.py    Internal Server Error: /news/  (<class 'AttributeError'>, AttributeError("'int' object has no attribute 'now'"), <traceback object at 0x000001DFF5D49D80>)
+Traceback (most recent call last):
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python_course\D10\Newspaper\news\views.py", line 166, in get
+    'current_time': timezone.now(),
+AttributeError: 'int' object has no attribute 'now'
+07/Feb/2023 20:51:43   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\core\servers\basehttp.py    "GET /news/ HTTP/1.1" 500 78072  None
+07/Feb/2023 20:58:07   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\utils\log.py    Internal Server Error: /news/  (<class 'AttributeError'>, AttributeError("'int' object has no attribute 'now'"), <traceback object at 0x00000224D9B5D8C0>)
+Traceback (most recent call last):
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "C:\Python_course\D10\Newspaper\news\views.py", line 60, in get_context_data
+    'current_time': timezone.now(),
+AttributeError: 'int' object has no attribute 'now'
+07/Feb/2023 20:58:07   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\core\servers\basehttp.py    "GET /news/ HTTP/1.1" 500 93002  None
+07/Feb/2023 21:19:13   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\utils\log.py    Internal Server Error: /news/  (<class 'django.utils.datastructures.MultiValueDictKeyError'>, MultiValueDictKeyError('timezone'), <traceback object at 0x000001AC7DA29180>)
+Traceback (most recent call last):
+  File "C:\Python_course\D10\venv\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'timezone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\contrib\auth\mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Python_course\D10\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Python_course\D10\Newspaper\news\views.py", line 69, in post
+    request.session['django_timezone'] = request.POST['timezone']
+  File "C:\Python_course\D10\venv\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'timezone'
+07/Feb/2023 21:19:13   ERROR    C:\Python_course\D10\venv\lib\site-packages\django\core\servers\basehttp.py    "POST /news/?page=3 HTTP/1.1" 500 96369  None
